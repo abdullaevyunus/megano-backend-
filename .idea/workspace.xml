@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d5194f6-2e54-47da-95b8-4ea27d39452f" name="Changes" comment="order">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/auth_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/auth_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/basket_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/basket_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/order_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/order_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/payment_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/payment_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/profile_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/profile_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/tags_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/tags_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/migrations/0002_orderid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/megano/shopapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Alexey &lt;alexei@bk.ru&gt;" />
+        <option value="Skillbox &lt;it@skillbox.ru&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="megano" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2alDWwSya9eRrEjp61GE3hp9CM3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowGit.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Python.settings">
+    <configuration name="catalog_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_django_diploma" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/megano/shopapp/apis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/megano/shopapp/apis/catalog_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_django_diploma" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/megano/shopapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/megano/shopapp/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="order_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_django_diploma" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/megano/shopapp/apis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/megano/shopapp/apis/order_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="product_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_django_diploma" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/megano/shopapp/apis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/megano/shopapp/apis/product_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_django_diploma" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/megano/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/megano/core/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.settings" />
+        <item itemvalue="Python.catalog_api" />
+        <item itemvalue="Python.order_api" />
+        <item itemvalue="Python.product_api" />
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d5194f6-2e54-47da-95b8-4ea27d39452f" name="Changes" comment="" />
+      <created>1704884311473</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704884311473</updated>
+    </task>
+    <task id="LOCAL-00001" summary="project structure">
+      <created>1705384001165</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705384001165</updated>
+    </task>
+    <task id="LOCAL-00002" summary="project structure">
+      <created>1705466873318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705466873318</updated>
+    </task>
+    <task id="LOCAL-00003" summary="project structure">
+      <created>1705466926279</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705466926279</updated>
+    </task>
+    <task id="LOCAL-00004" summary="requirements">
+      <created>1705467011913</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467011913</updated>
+    </task>
+    <task id="LOCAL-00005" summary="requirements">
+      <created>1705467169078</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467169078</updated>
+    </task>
+    <task id="LOCAL-00006" summary="requirements">
+      <created>1705467418281</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467418281</updated>
+    </task>
+    <task id="LOCAL-00007" summary="requirements">
+      <created>1705467602845</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467602845</updated>
+    </task>
+    <task id="LOCAL-00008" summary="requirements">
+      <created>1705467637467</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467637467</updated>
+    </task>
+    <task id="LOCAL-00009" summary="requirements">
+      <created>1705467648041</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467648041</updated>
+    </task>
+    <task id="LOCAL-00010" summary="requirements">
+      <created>1705467790684</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467790684</updated>
+    </task>
+    <task id="LOCAL-00011" summary="structure">
+      <created>1705467886600</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467886600</updated>
+    </task>
+    <task id="LOCAL-00012" summary="structure">
+      <created>1705467933537</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705467933537</updated>
+    </task>
+    <task id="LOCAL-00013" summary="structure">
+      <created>1705468156369</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1705468156369</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update">
+      <created>1705510036796</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705510036796</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update">
+      <created>1705510448617</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1705510448617</updated>
+    </task>
+    <task id="LOCAL-00016" summary="views">
+      <created>1705986575668</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1705986575668</updated>
+    </task>
+    <task id="LOCAL-00017" summary="views">
+      <created>1705986716455</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1705986716455</updated>
+    </task>
+    <task id="LOCAL-00018" summary="model">
+      <created>1705986769059</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1705986769059</updated>
+    </task>
+    <task id="LOCAL-00019" summary="model">
+      <created>1705986851334</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1705986851334</updated>
+    </task>
+    <task id="LOCAL-00020" summary="model">
+      <created>1705986874163</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1705986874163</updated>
+    </task>
+    <task id="LOCAL-00021" summary="product api">
+      <created>1707910256254</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1707910256254</updated>
+    </task>
+    <task id="LOCAL-00022" summary="product api">
+      <created>1707910344276</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1707910344276</updated>
+    </task>
+    <task id="LOCAL-00023" summary="product api">
+      <created>1707910443063</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1707910443063</updated>
+    </task>
+    <task id="LOCAL-00024" summary="api view">
+      <created>1707934122031</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1707934122031</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix">
+      <created>1708968094003</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708968094003</updated>
+    </task>
+    <task id="LOCAL-00026" summary="admin">
+      <created>1708968548923</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708968548923</updated>
+    </task>
+    <task id="LOCAL-00027" summary="admin">
+      <created>1708968673227</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708968673227</updated>
+    </task>
+    <task id="LOCAL-00028" summary="admin">
+      <created>1708968738050</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708968738050</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fixed">
+      <created>1708969326164</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708969326164</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fixed">
+      <created>1709296044854</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709296044854</updated>
+    </task>
+    <task id="LOCAL-00031" summary="post">
+      <created>1709355070735</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1709355070736</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fixed">
+      <created>1709400813133</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1709400813133</updated>
+    </task>
+    <task id="LOCAL-00033" summary="catalog">
+      <created>1709648438849</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1709648438849</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixed">
+      <created>1709659810011</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1709659810011</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fixed">
+      <created>1709717177936</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1709717177936</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fixed">
+      <created>1709779121174</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1709779121174</updated>
+    </task>
+    <task id="LOCAL-00037" summary="catalog">
+      <created>1710241298412</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1710241298412</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fixed">
+      <created>1710327868720</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1710327868720</updated>
+    </task>
+    <task id="LOCAL-00039" summary="order">
+      <created>1710584537907</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1710584537907</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project structure" />
+    <MESSAGE value="requirements" />
+    <MESSAGE value="structure" />
+    <MESSAGE value="update" />
+    <MESSAGE value="views" />
+    <MESSAGE value="model" />
+    <MESSAGE value="product" />
+    <MESSAGE value="product api" />
+    <MESSAGE value="api view" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="admin" />
+    <MESSAGE value="post" />
+    <MESSAGE value="catalo" />
+    <MESSAGE value="catalog" />
+    <MESSAGE value="fixed" />
+    <MESSAGE value="order" />
+    <option name="LAST_COMMIT_MESSAGE" value="order" />
+  </component>
+</project>

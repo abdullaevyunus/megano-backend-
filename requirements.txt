@@ -1,0 +1,4 @@
+Django~=3.2.23
+setuptools~=68.2.2
+mock~=4.0.3
+djangorestframework~=3.12.4
