@@ -13,7 +13,7 @@ urlpatterns = [
     path('banners/', BannersAPIView.as_view(), name='banners'),
 
     path('orders', OrderListCreateAPIView.as_view(), name='orders'),
-    path('order/<int:pk>', OrderAPIView.as_view(), name='order'),
+    path('order/<int:pk>', OrderAPIView.as_view(), name='order_detail'),
 
     path('profile', ProfileAPIView.as_view(), name='profile'),
     path('profile/password', ChangePasswordAPIView.as_view(), name='profile-password'),
@@ -27,5 +27,8 @@ urlpatterns = [
 
     path('basket', BasketAPIView.as_view(), name='basket'),
 
-    path('payment/', PaymentAPIView.as_view(), name='payment'),
+    path('payment/<int:pk>', PaymentAPIView.as_view(), name='payment'),
+    path('products/<int:pk>', ProductDetailView.as_view(), name='prodduct'),
 ]
+
+

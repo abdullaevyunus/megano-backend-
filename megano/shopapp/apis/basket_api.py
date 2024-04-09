@@ -1,3 +1,4 @@
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -9,6 +10,15 @@ class BasketAPIView(APIView):
     """
     Products in basket
     """
+
+    @swagger_auto_schema(
+        tags=['basket'],
+        responses={
+            200: BasketGetSerializer,
+            400: 'Bad Request',
+            404: 'Not Found'
+        },
+    )
     def get(self, request, format=None):
         """
         Get products
@@ -21,7 +31,15 @@ class BasketAPIView(APIView):
         serializer = BasketGetSerializer(products, many=True)
         return Response(serializer.data)
 
-
+    @swagger_auto_schema(
+        tags=['basket'],
+        request_body=BasketPOSTSerializer,
+        responses={
+            200: BasketPOSTSerializer,
+            400: 'Bad Request',
+            404: 'Not Found'
+        },
+    )
     def post(self, request, *args, **kwargs):
         """
         Add products to basket
@@ -32,6 +50,13 @@ class BasketAPIView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+    @swagger_auto_schema(
+        tags=['basket'],
+        responses={
+            204: 'No Content',
+            404: 'Not Found'
+        },
+    )
     def delete(self, request, format=None):
         """
         Delet products from basket

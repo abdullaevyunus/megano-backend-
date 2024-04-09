@@ -1,9 +1,10 @@
-from shopapp.models import Order, Product
-from shopapp.serializers import OrderSerializer, OrderProductPOSTSerializer
+from drf_yasg.utils import swagger_auto_schema
+from shopapp.models import Order, OrderProduct
+from shopapp.serializers import OrderGETSerializer,OrderPOSTSerializer, OrderProductPOSTSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from django.contrib.auth.models import User
+
 
 
 class OrderListCreateAPIView(APIView):
@@ -11,19 +12,31 @@ class OrderListCreateAPIView(APIView):
     Orders List and Create
     """
 
+    @swagger_auto_schema(
+        tags=['order'],
+        responses={
+            200: OrderGETSerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request):
         """
         Get orders
         """
         orders = Order.objects.filter(user=request.user)
-        serializer = OrderSerializer(orders, many=True)
+        serializer = OrderGETSerializer(orders, many=True)
         return Response(serializer.data)
 
-
+    @swagger_auto_schema(
+        tags=['order'],
+        request_body=OrderProductPOSTSerializer,
+        responses={
+            200: OrderProductPOSTSerializer,
+            400: 'Bad Request',
+            404: 'Not Found'
+        },
+    )
     def post(self, request, format=None):
-        """
-        Post order ID
-        """
         user = request.user
         products_data = request.data
         for product_data in products_data:
@@ -36,35 +49,47 @@ class OrderListCreateAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-
 class OrderAPIView(APIView):
     """
     Order details
     """
+
+    @swagger_auto_schema(
+        tags=['order'],
+        responses={
+            200: OrderGETSerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request, pk):
         """
         Get order detail
         """
         try:
             order = Order.objects.get(pk=pk, user=request.user)
-            serializer = OrderSerializer(order)
+            serializer = OrderGETSerializer(order)
             return Response(serializer.data)
         except Order.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-
-    def post(self, request, pk):
-        """
-        Confirm order
-        """
+    @swagger_auto_schema(
+        tags=['order'],
+        request_body=OrderPOSTSerializer,
+        responses={
+            200: OrderPOSTSerializer,
+            400: 'Bad Request',
+            404: 'Not Found'
+        },
+    )
+    def post(self, request, pk, format=None):
         try:
-            order = Order.objects.get(pk=pk, user=request.user)
-            order.status = request.data.get('status', order.status)
-            order.save()
-            return Response({"message": "Order status updated successfully"}, status=status.HTTP_200_OK)
-        except Order.DoesNotExist:
-            return Response({"error": "Order does not exist"}, status=status.HTTP_404_NOT_FOUND)
-        except Exception as e:
-            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            product = OrderProduct.objects.get(pk=pk)
+        except OrderProduct.DoesNotExist:
+            return Response({"error": "Product does not exist"}, status=status.HTTP_404_NOT_FOUND)
 
-
+        serializer = OrderPOSTSerializer(data=request.data)
+        if serializer.is_valid():
+            order = serializer.save(user=request.user)
+            order.products.add(product)
+            return Response({"orderId": order.id}, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -69,7 +69,7 @@ class Product(models.Model):
     date = models.DateTimeField()
     title = models.CharField(max_length=255)
     description = models.TextField()
-    full_description = models.TextField()
+    fullDescription = models.TextField()
     freeDelivery = models.BooleanField()
     rating = models.FloatField()
     images = models.ManyToManyField(Image)
@@ -118,14 +118,14 @@ class OrderProduct(models.Model):
 
 
 class Order(models.Model):
-    createdAt = models.DateTimeField()
+    createdAt = models.DateTimeField(auto_now_add=True)
     fullName = models.CharField(max_length=255)
     email = models.EmailField()
     phone = models.TextField()
-    deliveryType = models.TextField()
-    paymentType = models.TextField()
-    totalCost = models.FloatField()
-    status = models.TextField()
+    deliveryType = models.TextField(null=True, blank=True)
+    paymentType = models.TextField(null=True, blank=True)
+    totalCost = models.FloatField(null=True, blank=True)
+    status = models.TextField(null=True, blank=True)
     city = models.TextField()
     address = models.TextField()
     products = models.ManyToManyField(OrderProduct)
@@ -134,7 +134,8 @@ class Order(models.Model):
 
 
     def __str__(self):
-        return self.fullName
+        products_titles = ', '.join([product.title for product in self.products.all()])
+        return products_titles
 
 
 class Profile(models.Model):
@@ -153,6 +154,7 @@ class Profile(models.Model):
 
 
 class Payment(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     number = models.IntegerField()
     name = models.CharField(max_length=255)
     month = models.CharField(max_length=2)
@@ -160,9 +162,11 @@ class Payment(models.Model):
     code = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
+
 
 
 class Basket(models.Model):
     id = models.IntegerField(primary_key=True)
     count = models.IntegerField()
-

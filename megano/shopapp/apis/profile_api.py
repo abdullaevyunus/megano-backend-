@@ -1,3 +1,5 @@
+from drf_yasg.utils import swagger_auto_schema
+
 from shopapp.models import Profile
 from shopapp.serializers import ProfileSerializer, ChangePasswordSerializer, ChangeAvatarSerializer, ImageSerializer
 from rest_framework.views import APIView
@@ -12,6 +14,14 @@ class ProfileAPIView(APIView):
     """
     User's profile
     """
+
+    @swagger_auto_schema(
+        tags=['profile'],
+        responses={
+            200: ProfileSerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request):
         try:
             profile = Profile.objects.get(user=request.user)
@@ -20,6 +30,15 @@ class ProfileAPIView(APIView):
         except Profile.DoesNotExist:
             raise Http404("Profile does not exist")
 
+    @swagger_auto_schema(
+        tags=['profile'],
+        request_body=ProfileSerializer,
+        responses={
+            200: ProfileSerializer,
+            400: 'Bad Request',
+            404: 'Not Found'
+        },
+    )
     def post(self, request):
         user = request.user
         serializer = ProfileSerializer(data=request.data)
@@ -33,6 +52,15 @@ class ChangePasswordAPIView(APIView):
     """
     Change password of profile
     """
+    @swagger_auto_schema(
+        tags=['profile'],
+        request_body=ChangePasswordSerializer,
+        responses={
+            200: ChangePasswordSerializer,
+            400: 'Bad Request',
+            404: 'Not Found'
+        },
+    )
     def post(self, request):
         serializer = ChangePasswordSerializer(data=request.data)
         if serializer.is_valid():
@@ -51,6 +79,15 @@ class ChangeAvatarAPIView(APIView):
     """
     Change profile image
     """
+    @swagger_auto_schema(
+        tags=['profile'],
+        request_body=ImageSerializer,
+        responses={
+            200: ImageSerializer,
+            400: 'Bad Request',
+            404: 'Not Found'
+        },
+    )
     def post(self, request, *args, **kwargs):
         serializer = ImageSerializer(data=request.FILES)
         if serializer.is_valid():

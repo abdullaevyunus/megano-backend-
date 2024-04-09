@@ -31,6 +31,13 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ('id', 'title', 'image', 'subcategories')
+from .models import Product, Review
+
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = '__all__'
 
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -71,11 +78,7 @@ class OrderProductPOSTSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OrderProduct
-        fields = (
-            'id', 'category', 'price', 'count', 'date', 'title', 'description', 'freeDelivery', 'images', 'tags',
-            'reviews',
-            'rating', 'user')
-
+        fields = '__all__'
 
     def get_reviews(self, obj):
         return obj.reviews.count
@@ -97,15 +100,23 @@ class OrderProductGETSerializer(serializers.ModelSerializer):
         return obj.reviews.count()
 
 
-class OrderSerializer(serializers.ModelSerializer):
+class OrderGETSerializer(serializers.ModelSerializer):
+    products = OrderProductGETSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Order
+        fields = ('id', 'createdAt', 'fullName', 'email', 'phone', 'deliveryType', 'paymentType', 'totalCost', 'status', 'city', 'address', 'products', )
+
+
+class OrderPOSTSerializer(serializers.ModelSerializer):
     products = OrderProductGETSerializer(many=True, read_only=True)
 
     class Meta:
         model = Order
         fields = (
-            'id', 'createdAt', 'fullName', 'email', 'phone', 'deliveryType', 'paymentType', 'totalCost', 'status',
-            'city', 'address', 'products',
-        )
+        'id', 'createdAt', 'fullName', 'email', 'phone', 'deliveryType', 'paymentType', 'totalCost', 'status', 'city',
+        'address', 'products',)
+
 
 
 
@@ -156,7 +167,7 @@ class SignInSerializer(serializers.Serializer):
 class PaymentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Payment
-        fields = ('number', 'name', 'month', 'year', 'code')
+        fields = ('order', 'number', 'name', 'month', 'year', 'code')
 
 
 class BasketPOSTSerializer(serializers.ModelSerializer):

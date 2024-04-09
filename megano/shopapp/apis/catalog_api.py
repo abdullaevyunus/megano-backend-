@@ -12,7 +12,13 @@ class ProductListAPIView(APIView):
     List of Products
     """
 
-    @swagger_auto_schema(tags=['catalog'])
+    @swagger_auto_schema(
+        tags=['catalog'],
+        responses={
+            200: ProductSerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request):
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
@@ -24,7 +30,13 @@ class PopularListAPIView(APIView):
     Popular Products List
     """
 
-    @swagger_auto_schema(tags=['catalog'])
+    @swagger_auto_schema(
+        tags=['order'],
+        responses={
+            200: ProductSerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request):
         popular_products = Product.objects.filter(rating__gte=4.5)
         serializer = ProductSerializer(popular_products, many=True)
@@ -36,7 +48,13 @@ class LimitedListAPIview(APIView):
     Limited Products List
     """
 
-    @swagger_auto_schema(tags=['catalog'])
+    @swagger_auto_schema(
+        tags=['catalog'],
+        responses={
+            200: ProductSerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request):
         limited_products = Product.objects.filter(count__lt=10)
         serializer = ProductSerializer(limited_products, many=True)
@@ -48,7 +66,13 @@ class CategoryListAPIview(APIView):
     List of Categories
     """
 
-    @swagger_auto_schema(tags=['catalog'])
+    @swagger_auto_schema(
+        tags=['catalog'],
+        responses={
+            200: CategorySerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request):
         categories = Category.objects.all()
         serializer = CategorySerializer(categories, many=True)
@@ -59,7 +83,14 @@ class SalesAPIView(APIView):
     """
     Sales list
     """
-    @swagger_auto_schema(tags=['catalog'])
+
+    @swagger_auto_schema(
+        tags=['catalog'],
+        responses={
+            200: SalesSerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request):
         sales = Sales.objects.all()
         paginator = Paginator(sales, 2)
@@ -84,7 +115,13 @@ class BannersAPIView(APIView):
     Banners
     """
 
-    @swagger_auto_schema(tags=['catalog'])
+    @swagger_auto_schema(
+        tags=['catalog'],
+        responses={
+            200: ProductSerializer,
+            404: 'Not Found'
+        },
+    )
     def get(self, request):
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)

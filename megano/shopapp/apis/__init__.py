@@ -6,3 +6,4 @@ from .auth_api import SignUpView, SignInView, SignOutView
 from .tags_api import TagAPIView
 from .basket_api import BasketAPIView
 from .payment_api import PaymentAPIView
+from .product_api import ProductDetailView
