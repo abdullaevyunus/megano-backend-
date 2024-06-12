@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6d5194f6-2e54-47da-95b8-4ea27d39452f" name="Changes" comment="order">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/auth_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/auth_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/basket_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/basket_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/order_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/order_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/payment_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/payment_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/profile_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/profile_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/apis/tags_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/apis/tags_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/migrations/0002_orderid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/megano/shopapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/megano/shopapp/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
